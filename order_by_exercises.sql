@@ -15,5 +15,5 @@
 6. Enter a comment with the number of employees returned, the name of the newest employee, and the name of the oldest employee.
 --- 899 employees returned. The newest hire is Teiji Eldridge. The oldest hire is Sergi Erde.
 
-7. Find all current or previous employees employees whose last name starts and ends with 'E'. Enter a comment with the number of employees whose last name starts and ends with E. How many employees last names end with E, regardless of whether they start with E?
+7. Enter a comment with the number of employees returned, the name of the oldest employee who was hired last, and the name of the youngest employee who was hired first.
  --- 362 employees returned. Of the oldest employees, Khun Bernini was hired last. Of the youngest employees, Douadi Pettis was hired first. 
