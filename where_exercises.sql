@@ -34,6 +34,10 @@ SELECT COUNT(last_name)
 FROM employees
 WHERE last_name LIKE 'E%'
 AND last_name LIKE '%E';
+-- 24,292 employees names end with E
+SELECT last_name 
+ FROM employees
+ WHERE last_name LIKE '%E';
 8. Find all current or previous employees hired in the 90s. Enter a comment with the number of employees returned.
 -- 135,214 employees hired in the nineties
 SELECT COUNT(hire_date)
