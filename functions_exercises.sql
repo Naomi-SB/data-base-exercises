@@ -49,13 +49,32 @@ ORDER BY birth_date AND hire_date DESC;
 --WHERE last_name LIKE 'E%E';
 
 4. Find all employees hired in the 90s and born on Christmas. Use datediff() function to find how many days they have been working at the company (Hint: You will also need to use NOW() or CURDATE()),
--- SELECT DATEDIFF(CURDATE(), hire_date)
+-- SELECT first_name
+    --last_name
+    --DATEDIFF(CURDATE(), hire_date) AS days_with_company
 --FROM employees
 --WHERE birth_date LIKE '%-12-25' AND hire_date LIKE '199%';
 
 5. Find the smallest and largest current salary from the salaries table. 
 -- smallest salary: 38,623. CODE used: SELECT MIN(salary) FROM salaries;
 --largest salary: 158,220. Code used: SELECT MAX(salary) FROM salaries;
+--*CORRECTION, DID NOT LOOK FOR CURRENT DATE
+--SELECT MIN(salary),
+	--MAX(salary)
+--FROM salaries
+--WHERE to_date > CURDATE();
 
 6. Generate a username:
--- 
+-- SELECT first_name, 
+	--last_name, 
+	--birth_date,
+    --LOWER(
+		--CONCAT(
+			--SUBSTR(first_name, 1, 1),
+            --SUBSTR(last_name, 1, 4),
+            --'_',
+            --SUBSTR(birth_date, 6, 2),
+            --SUBSTR(birth_date, 3, 2)
+		--)
+	--) AS username
+--FROM employees; 
