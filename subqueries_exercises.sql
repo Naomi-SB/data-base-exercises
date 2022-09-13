@@ -54,3 +54,29 @@ SELECT(SELECT COUNT(salary)
 									WHERE to_date > CURDATE())*100;
 
 -- ** BONUS
+--1. Find all the department names that currently have female managers.
+SELECT dept_name 
+FROM departments
+WHERE dept_no IN (SELECT dept_no
+				FROM dept_manager
+                WHERE emp_no IN (SELECT emp_no
+								FROM employees
+                                WHERE gender ='F')
+                                AND to_date > CURDATE())
+
+-- 2. Find the first and last name of the employee with the highest salary.
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no = (SELECT emp_no
+				FROM salaries
+                WHERE salary = (SELECT MAX(salary)
+								FROM salaries));
+--3. Find the department name that the employee with the highest salary works in.
+SELECT dept_name
+FROM departments
+WHERE dept_no = (SELECT dept_no
+				FROM dept_emp
+                WHERE emp_no = (SELECT emp_no
+								FROM salaries
+								WHERE salary = (SELECT MAX(salary)
+												FROM salaries)));
